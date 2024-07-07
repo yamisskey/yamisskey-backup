@@ -1,2 +1,2 @@
-# misskey-backup
-postgreSQLのバックアップをよしなに取るためのスクリプト  
+# yamisskey-backup
+postgreSQLのバックアップをよしなに取るためのスクリプトをしゃふすきーからフォーク
