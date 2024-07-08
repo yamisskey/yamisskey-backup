@@ -12,6 +12,7 @@ RUN apk add curl unzip p7zip
 # rclone
 RUN curl https://rclone.org/install.sh | bash
 
+RUN mkdir -p /root/.config/rclone
 COPY <<EOF /root/.config/rclone/rclone.conf
 [backup]
 type = s3
