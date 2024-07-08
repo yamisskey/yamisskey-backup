@@ -13,16 +13,16 @@ RUN apk add curl unzip p7zip
 RUN curl https://rclone.org/install.sh | bash
 
 RUN mkdir -p /root/.config/rclone
-COPY <<EOF /root/.config/rclone/rclone.conf
-[backup]
-type = s3
-provider = Cloudflare
-access_key_id = ${RCLONE_CONFIG_BACKUP_ACCESS_KEY_ID}
-secret_access_key = ${RCLONE_CONFIG_BACKUP_SECRET_ACCESS_KEY}
-region = auto
-endpoint = ${RCLONE_CONFIG_BACKUP_ENDPOINT}
-bucket_acl = ${RCLONE_CONFIG_BACKUP_BUCKET_ACL}
-EOF
+#COPY <<EOF /root/.config/rclone/rclone.conf
+#[backup]
+#type = s3
+#provider = Cloudflare
+#access_key_id = ${RCLONE_CONFIG_BACKUP_ACCESS_KEY_ID}
+#secret_access_key = ${RCLONE_CONFIG_BACKUP_SECRET_ACCESS_KEY}
+#region = auto
+#endpoint = ${RCLONE_CONFIG_BACKUP_ENDPOINT}
+#bucket_acl = ${RCLONE_CONFIG_BACKUP_BUCKET_ACL}
+#EOF
 
 # backup script
 COPY ./src/backup.sh /root/
