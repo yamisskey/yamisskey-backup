@@ -3,7 +3,7 @@ version: '3'
 services:
   backup:
     build: .
-    container_name: app
+    container_name: backup
     restart: always
     networks:
       - misskey-postgres
@@ -17,4 +17,4 @@ networks:
     external: true
 volumes:
   misskey-data:
-  
+
