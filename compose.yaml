@@ -3,7 +3,7 @@ version: '3'
 services:
   backup:
     build: .
-    container_name: backup
+    container_name: app
     restart: always
     networks:
       - misskey-postgres
